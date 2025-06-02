@@ -77,3 +77,38 @@ let badiValue = 12345678901234567890n; // BigInt type
 console.log(symbolobject);
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// Variables का Scope //
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+/*
+Variables का scope यह निर्धारित करता है कि एक variable कब और कहाँ access किया जा सकता है।
+
+1. Global Scope: 
+   - Global variables पूरे code में कहीं भी access किए जा सकते हैं।
+   - इन्हें program के किसी भी हिस्से से access किया जा सकता है।
+2. Local Scope:
+   - Local variables केवल उस block या function के अंदर access किए जा सकते हैं जहाँ उन्हें declare किया गया है।
+   - इन्हें केवल उसी block या function के अंदर access किया जा सकता है।
+3. Block Scope:
+   - Block scope variables केवल उस block के अंदर access किए जा सकते हैं जहाँ उन्हें declare किया गया है।
+   - यह विशेष रूप से let और const के साथ उपयोग किया जाता है।
+*/
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// Global Scope - पूरी file में कहीं भी access कर सकते हैं
+
+
+var globalVar = "Main global hun";
+let globalLet = "Main bhi global hun";
+
+// Local Scope - केवल function के अंदर access कर सकते हैं
+function merafunc(){
+   var funcVar = "Main function ke andar hun";
+   let funcLet = "Main bhi function ke andar bhi hun";
+}
+
+// Block Scope - केवल block के अंदर access कर सकते हैं
+if (true) {
+   var blockVar = "Main block ke andar hun";
+   let blockLet = "Main bhi block ke andar hun";
+}
